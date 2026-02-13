@@ -1,0 +1,20 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char s[200];
+    cin.getline(s, 200);
+
+    if (s[0] >= 'a' && s[0] <= 'z')
+        s[0] -= 32;
+
+    for (int i = 1; s[i] != '\0'; i++)
+        if (s[i - 1] == ' ' && s[i] >= 'a' && s[i] <= 'z')
+            s[i] -= 32;
+
+    cout << s;
+    return 0;
+}
+
+
